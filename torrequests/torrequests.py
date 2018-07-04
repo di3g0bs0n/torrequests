@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2017 Diego Fernandez <di3g0bson@gmail.com>.
+# Copyright (C) 2017 Diego Fernandez <di3g0bs0n@gmail.com>.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -71,14 +71,14 @@ class Tor(object):
 			return -1
 
 	def get(self, url, data = None, files = None, cookies = None, headers = None, auth = None):
-		"""Make a GET request"""
+		"""Makes a GET request"""
 		_cookies = self.__intersect(self.cookies, cookies)
 		_headers = self.__intersect(self.headers, headers)
 		_auth = auth if auth is not None else self.auth
 		return self.session.get(url=url, data=data, files=files, cookies=_cookies, headers=_headers, auth=auth)
 
 	def post(self, url, data = None, files = None, cookies = None, headers = None, auth = None):
-		"""Make a POST request"""
+		"""Makes a POST request"""
 		_cookies = self.__intersect(self.cookies, cookies)
 		_headers = self.__intersect(self.headers, headers)
 		_auth = auth if auth is not None else self.auth

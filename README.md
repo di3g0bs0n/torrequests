@@ -42,7 +42,7 @@ cookie = {
 	"SessionID": "123456789"
 }
 
-# Request is sended with both headers (User-Agent and X-Custom-Header), and a Cookie (SessionID)
+# Request is sent with both headers (User-Agent and X-Custom-Header), and a Cookie (SessionID)
 r = tor.post('http://www.example.com', headers=header, cookies=cookie)
 
 if r.status_code == 200:
